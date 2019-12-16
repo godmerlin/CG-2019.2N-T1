@@ -10,6 +10,7 @@ var loader_geodude = new GLTFLoader().setPath( '/modelo/' );
 var ground_y_position = -250;
 var geodude;
 var sentido=1;
+
 init();
 
 
@@ -66,6 +67,7 @@ function init(){
         geodude.position.set(0,ground_y_position+10,0);
         geodude.rotation.z = - Math.PI;
         scene.add(geodude);
+        
     }
 
     // // movimentacao pokemon
@@ -92,16 +94,6 @@ function init(){
     // document.addEventListener("keydown", onKeyDown, false);
     
 
-function moves(){
-
-
-    geodude.position.y += (0.001 * sentido);
-
-    if(geodude.position.y<= -10 || geodude.position.y>= 10){
-    sentido *=-1;
-    } 
-
-}
 }
 
 
@@ -111,13 +103,14 @@ function moves(){
 function moves(){
 
 
-        geodude.position.y += (0.00001 * sentido);
+        geodude.position.y += (2.0 * sentido);
 
-        if(geodude.position.y<= -10 || geodude.position.y>= 10){
+        if(geodude.position.y<= -250 || geodude.position.y>= 250){
         sentido *=-1;
         } 
     
 }
+
 function animate() {
     requestAnimationFrame(animate);
     moves();
