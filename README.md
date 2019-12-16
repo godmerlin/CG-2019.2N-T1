@@ -3,4 +3,5 @@ Trabalho final de Computação grafica
 Philipe Soares Fernandes (1711100027)
 
 Ideai geral do trabalho:
-tela de proteção do windowns
+um ambiente basico com uma movimentação basica do pokemon
+
