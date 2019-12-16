@@ -23,7 +23,7 @@ function init(){
     scene.fog = new THREE.Fog( 0xadc8f0, 15, 10000 );
 
     // ceu
-    scene.background = new THREE.Color( 0x808000 );
+    scene.background = new THREE.Color( 0x0080ff );
 
     // camera
     camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 15000 );
@@ -103,9 +103,9 @@ function init(){
 function moves(){
 
 
-        geodude.position.y += (2.0 * sentido);
+        geodude.position.y += (5.0 * sentido);
 
-        if(geodude.position.y<= -250 || geodude.position.y>= 250){
+        if(geodude.position.y<= -250 || geodude.position.y>= 50){
         sentido *=-1;
         } 
     
