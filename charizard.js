@@ -93,28 +93,7 @@ function init(){
         zapdos.rotation.z = - Math.PI;
         scene.add(zapdos);
     }
-     // movimentacao pokemon
-     function onKeyDown(event) {
-         var keyCode = event.which;
-        var velocidade = 100;
-         if (keyCode == 87) {                   // w
-             geodude.position.z -= velocidade; 
-         } else if (keyCode == 83) {            // s
-             geodude.position.z += velocidade;
-         } else if (keyCode == 65) {            // a
-             geodude.rotation.z += Math.PI / 32;
-         } else if (keyCode == 68) {            // d
-             geodude.rotation.z -= Math.PI / 32;;
-         } else if (keyCode == 81) {            // q
-            if(geodude.position.y >= ground_y_position+200)
-                geodude.position.y -= velocidade;
-        } else if (keyCode == 69) {            // e
-            geodude.position.y += velocidade;
-         } else if (keyCode == 32) {            // espaco
-             geodude.position.set(50,500,100);
-         }
-     };
-     document.addEventListener("keydown", onKeyDown, false);
+    
     
      var listener = new THREE.AudioListener();
      camera.add( listener );
@@ -143,7 +122,7 @@ function moves(){
         zapdos.position.z += (20.0 * sentidozap);
 
         geodude.position.y += (8.0 * sentido);
-
+        geodude.rotation.z += -0.1;
         if(geodude.position.y<= -250 || geodude.position.y>= 50){
         sentido *=-1;
         } 
